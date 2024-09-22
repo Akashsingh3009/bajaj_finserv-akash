@@ -1,0 +1,33 @@
+<form action="/bfhl" method="POST">
+  <!-- User input data as JSON string -->
+  <textarea
+    name="data"
+    placeholder='Enter JSON data like this: {"data": ["M", "1", "334", "4", "B", "Z", "a"]}'
+    rows="4"
+    cols="50"
+    required
+  ></textarea>
+
+  <!-- Hidden input for file, if required -->
+  <input type="hidden" name="file_b64" value="BASE_64_STRING" />
+
+  <br />
+
+  <!-- Dropdown Filter -->
+  <label for="filter">Filter by:</label>
+  <select name="filter" id="filter">
+    <option value="all">All</option>
+    <option value="numbers">Numbers</option>
+    <option value="alphabets">Alphabets</option>
+    <option value="highest_lowercase_alphabet">
+      Highest Lowercase Alphabet
+    </option>
+    <option value="file_valid">File Validity</option>
+    <option value="file_mime_type">File Mime Type</option>
+    <option value="file_size_kb">File Size (KB)</option>
+  </select>
+
+  <br /><br />
+
+  <button type="submit">Submit</button>
+</form>
